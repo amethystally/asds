@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Account Region Fetcher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="grid-container">
+      <!-- Username Fetcher -->
+      <div class="card">
+        <div class="card-header">
+          <h1>TikTok Username Region Fetcher</h1>
+          <p>Enter a TikTok username to discover its region</p>
+        </div>
+        <div class="card-content">
+          <form id="username-form">
+            <div class="form-group">
+              <input 
+                type="text" 
+                id="username-input" 
+                placeholder="@username" 
+                required
+              >
+            </div>
+            <button type="submit" id="username-submit-button">
+              Fetch Region
+              <span class="shine-element"></span>
+            </button>
+            <div id="username-loading" class="hidden">
+              <div class="spinner"></div>
+              <span>Processing...</span>
+            </div>
+          </form>
+          <div id="username-error-message" class="error-message hidden"></div>
+        </div>
+        <div id="username-result-container" class="card-footer hidden">
+          <h3>Region:</h3>
+          <div class="result-box">
+            <pre id="username-result-content"></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Fetcher -->
+      <div class="card">
+        <div class="card-header">
+          <h1>TikTok Account Email Region Fetcher</h1>
+          <p>Enter a TikTok account email to discover its region</p>
+        </div>
+        <div class="card-content">
+          <form id="email-form">
+            <div class="form-group">
+              <input 
+                type="email" 
+                id="email-input" 
+                placeholder="tiktok@example.com" 
+                required
+              >
+            </div>
+            <button type="submit" id="email-submit-button">
+              Fetch Region
+              <span class="shine-element"></span>
+            </button>
+            <div id="email-loading" class="hidden">
+              <div class="spinner"></div>
+              <span>Processing...</span>
+            </div>
+          </form>
+          <div id="email-error-message" class="error-message hidden"></div>
+        </div>
+        <div id="email-result-container" class="card-footer hidden">
+          <h3>Region:</h3>
+          <div class="result-box">
+            <pre id="email-result-content"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="footer-text">This tool helps identify the region of TikTok accounts based on their username or email address.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
